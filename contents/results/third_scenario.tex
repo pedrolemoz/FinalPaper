@@ -1,0 +1,10 @@
+No MVC, as operações relacionadas ao registo e autenticação dos usuários se encontram no \emph{UserModel}.
+Ele faz uso das bibliotecas externas que são necessárias para comunicar-se com os serviços de autenticação e o \emph{Firebase}.
+Para se adequar ao cenário proposto, é necessário criar um método que realize a autenticação com o \emph{GitHub}.
+Também, é necessário adicionar novos métodos no \emph{Controller} que lida com a autenticação para executar o novo método criado.
+A \emph{View} que realiza a autenticação também sofrerá modificações.
+
+Na arquitetura limpa, é necessário criar um novo caso de uso que realize a validação dos dados do usuário e encaminhe-os por meio do repositório de autenticação.
+Uma abstração e implementação de um serviço que realize a autenticação com o \emph{GitHub} deverão ser criados.
+Por sua vez, é necessário modificar a abstração e implementação do repositório de autenticação, incluindo a dependência da abstração do novo serviço criado, bem como um novo método que irá consumir o serviço.
+Assim como no MVC, novos métodos serão criados no \emph{Controller} que lida com a autenticação, que passará a consumir o novo caso de uso, além de modificações na \emph{View} correspondente.

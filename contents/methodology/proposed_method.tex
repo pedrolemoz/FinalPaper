@@ -1,0 +1,30 @@
+A análise se dará por meio do método baseado em cenários, proposto por \shortciteA{scenario-based}.
+Um cenário é uma breve narrativa de usos esperados ou antecipados do sistema, tanto do ponto de vista do usuário quanto do desenvolvedor.
+Ele fornece uma visão de como o sistema satisfaz atributos de qualidade em vários contextos de uso.
+
+Inicialmente, é realizada uma descrição da arquitetura candidata.
+Após esta etapa, os cenários são desenvolvidos, de modo a ilustrar os tipos de atividades que o sistema deve suportar e as mudanças que são esperadas ao longo da vida de um software.
+Então, para cada cenário, é avaliado se a arquitetura necessita de alterações para executar o cenário.
+Em caso afirmativo, o cenário é classificado como direto. Caso contrário, é classificado como indireto.
+
+Quando dois ou mais cenários indiretos necessitam de mudanças em algum componente, diz-se que eles interagem.
+As interações mostram quais módulos estão envolvidos em quais tarefas.
+Um alto nível de interação pode significar que um componente possui um alto acoplamento.
+
+\subsubsection{Cenários propostos}
+
+Serão analisados os seguintes cenários:
+
+\begin{enumerate}
+	\item Mudança no banco de dados remoto
+
+	      É desejado que o banco de dados remoto seja substituído, de modo a utilizar a infraestrutura de outro serviço externo.
+
+	\item Implementação da pesquisa de notas por título e conteúdo
+
+	      É desejado que seja possível realizar a pesquisa por notas, tanto no banco de dados remoto quanto no local. Os resultados devem ser apresentados em ordem cronológica.
+
+	\item Implementação de um novo método de autenticação
+
+	      É desejado que seja possível autenticar-se utilizando uma conta do GitHub, além dos métodos já existentes.
+\end{enumerate}

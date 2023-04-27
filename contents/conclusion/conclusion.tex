@@ -1,0 +1,32 @@
+No presente artigo, o padrão MVC e a arquitetura limpa são comparadas por meio do método de análise de arquiteturas de software baseado em cenários.
+São utilizados três cenários: mudanças no banco de dados remoto, implementação da pesquisa de notas por título e conteúdo, e por fim, a implementação de um novo método de autenticação.
+Em cada cenário, são observados os componentes que precisam ser criados ou alterados.
+
+A partir da análise realizada, é possível observar que cada abordagem possui seus pontos positivos e negativos.
+O MVC permite que as aplicações sejam desenvolvidas com mais facilidade e rapidez, pois não existem muitos limites arquiteturais a serem respeitados.
+A lógica da aplicação se concentra nas \emph{Models}, e em alguns casos, também nos \emph{Controllers}.
+Entretanto, num cenário em que é preciso realizar modificações profundas, como em uma mudança de banco de dados remoto, as \emph{Models} são reescritas quase que em sua totalidade, e os \emph{Controllers} precisam adaptar-se às mudanças que acontecem.
+Isso ocorre pois os \emph{Models} fazem uso direto de agentes externos, como bibliotecas de terceiros, sem qualquer camada de abstração, o que os deixam mais suscetíveis a falhas inesperadas.
+Pelo mesmo motivo, escrever testes unitários pode ser um desafio.
+Caso a dependência externa não possua uma forma de simular o seu comportamento por meio de uma classe de \emph{Mock}, nem sempre será possível realizar um teste unitário.
+Neste cenário, o teste de integração se torna a melhor opção para garantir a corretude do código, mas com a desvantagem de ser mais custoso.
+Além disso, é possível observar que as \emph{Models} tendem a ficar cada vez maiores com a adição de novas funcionalidades, o que pode dificultar a legibilidade e manutenção do código, além de atribuir muitas responsabilidades à um único componente.
+
+Por sua vez, a arquitetura limpa torna o processo de desenvolvimento mais demorado, já que abstrações são utilizadas em várias camadas, e há a necessidade de isolar serviços externos do domínio da aplicação.
+Seguir por essa abordagem facilita a realização de mudanças mais complexas, conforme observado no cenário da mudança do banco de dados.
+A lógica da aplicação se concentra nas entidades e nos casos de uso, que não são afetados quando alguma dependência externa sofre alterações.
+Assim, é possível realizar testes unitários com facilidade, pois os componentes que lidam com as regras de negócio estão isolados, e não dependem de nada externo para funcionarem corretamente.
+Entretanto, novas funcionalidades na aplicação exigem a criação de muitos componentes, bem como as interfaces que realizarão a ponte entre as camadas.
+Pode ser um desafio para desenvolvedores que não estão familiarizados entender todos os conceitos por trás desta abordagem, já que existem muitos componentes com responsabilidades distintas.
+
+De modo geral, o desenvolvimento utilizando a arquitetura limpa é mais demorado em relação ao MVC, além de necessitar que as regras de negócio sejam muito bem definidas antes do desenvolvimento ser iniciado.
+Porém, uma vez desenvolvida, é mais simples realizar a manutenção e os testes unitários da aplicação, já que os componentes estão bastante desacoplados entre si.
+Já no MVC, o inverso ocorre: é mais rápido desenvolver, mas a manutenção e testes unitários são mais custosos.
+
+Do ponto de vista da experiência de desenvolvimento, o código produzido utilizando o MVC tende a ser extenso, com classes que possuem muitos atributos e métodos.
+No caso da arquitetura limpa, há a necessidade de se criar muitas classes concretas e abstratas, e por esse motivo, muitas pastas e arquivos diferentes são criados.
+Essa característica permite que um time trabalhe em partes diferentes da mesma aplicação sem que hajam tantos conflitos, pois arquivos diferentes são utlizados.
+Ainda, há a possibilidade de se implementar \emph{Micro Frontends} com mais facilidade, isto é, a modularização da aplicação em pequenos pacotes, um para cada funcionalidade, com um único módulo compartilhado entre todos os pacotes.
+
+Em projetos de pequeno porte, provas de conceito e MVPs (\emph{Minimum Viable Product}, ou produto mínimo viável, em inglês), onde se deseja um rápido desenvolvimento, não se planeja realizar grandes mudanças no futuro, e a regra de negócio não é muito complexa, o MVC se torna uma ótima opção.
+Em grandes projetos, onde a aplicação necessita de estabilidade, possui regras de negócio complexas, esteiras de testes unitários, ou até mesmo uma modularização em pequenos pacotes, a arquitetura limpa se torna essencial.
