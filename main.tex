@@ -1,63 +1,56 @@
 \documentclass[12pt]{article}
 
 \usepackage{sbc/sbc-template}
-
-\usepackage{float}
-
-\usepackage[table]{xcolor}
-
 \usepackage{graphicx,url}
-
 \usepackage[brazil]{babel}
-
 \usepackage[utf8]{inputenc}
 
-\usepackage{apacite}
-     
+
 \sloppy
 
+% Metadata
 \title{Análise Técnica de Arquiteturas de Software no desenvolvimento de aplicativos para Smartphones}
-
 \author{João Pedro Pereira Lemos\inst{1}, Igor Rafael Silva Valente\inst{1}}
-
 \address{Instituto Federal de Educação, Ciência e Tecnologia do Estado do Ceará (IFCE)
   \email{joao.pedro.pereira62@aluno.ifce.edu.br, igor@ifce.edu.br}
 }
 
-\begin{document}
+\begin{document} 
 
 \maketitle
 
+% Abstract
 \begin{abstract}
-
-	\input{contents/abstract/english}
-
+  \input{contents/abstract/english}
 \end{abstract}
-
+     
 \begin{resumo}
-
-	\input{contents/abstract/portuguese}
-
+  \input{contents/abstract/portuguese}
 \end{resumo}
 
+
+% Introduction
 \section{Introdução}
 
 \input{contents/introduction/problem_and_motivation}
-
 \input{contents/introduction/goals}
 
+
+% Related work
 \section{Trabalhos relacionados}
 
 \input{contents/related_work/humeniuk-comparison}
-
 \input{contents/related_work/akhtar-comparison}
-
 \input{contents/related_work/conclusion}
 
+
+% Foundation
 \section{Fundamentação teórica}
 
 \input{contents/foundation/foundation}
 
+
+% Methodology
 \section{Metodologia}
 
 \input{contents/methodology/introduction}
@@ -74,16 +67,21 @@
 
 \input{contents/methodology/clean_arch_description}
 
+
+% Results
 \section{Resultados obtidos}
 
 \input{contents/results/results}
 
+
+% Conclusion
 \section{Conclusões e trabalhos futuros}
 
 \input{contents/conclusion/conclusion}
 
-\raggedright
-\bibliographystyle{apacite}
+
+% Bibliography
+\bibliographystyle{sbc/sbc}
 \bibliography{sbc/sbc-template}
 
 \end{document}
