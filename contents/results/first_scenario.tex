@@ -1,7 +1,7 @@
 No MVC, as operações relacionadas ao banco de dados remoto se encontram nos \emph{Models}, os quais são \emph{NoteModel} e \emph{UserModel}.
 Toda a lógica para obter e adicionar dados está concentrada nestes dois componentes.
 Eles fazem uso direto das bibliotecas externas que são necessárias para acessar o Firebase.
-Seria necessário alterar esses dois componentes quase que em sua totalidade para se adequarem ao cenário proposto.
+Com isso, faz-se necessário alterar esses dois componentes quase que em sua totalidade para se adequarem ao cenário proposto.
 Com a alteração destes dois componentes, também seria necessário efetuar modificações nos \emph{Controllers} da aplicação que interagem diretamente com os \emph{Models}.
 
 Na arquitetura limpa, as operações relacionadas ao banco de dados remoto se encontram na camada de agentes externos.
