@@ -14,13 +14,22 @@ Eles são utilizados, por exemplo, para converter os dados de entidades para um 
 
 A camada de agentes externos é composta por \emph{frameworks}, bibliotecas de terceiros, bancos de dados e qualquer outro componente externo que auxilie na execução das regras de negócio.
 
-A Figura~\ref{fig:clean_arch_circles} ilustra a Arquitetura Limpa como círculos concêntricos, onde cada círculo representa uma camada.
+A Figura~\ref{fig:clean_arch} ilustra as interações entre cada uma das camadas da arquitetura limpa.
+Os segmentos de reta tracejados representam uma dependência indireta entre os componentes, isto é, por meio de abstrações.
+Já os segmentos de reta contínuos representam uma dependência direta entre os componentes.
+Na Figura~\ref{fig:clean_arch_circles} são utilizados círculos concêntricos para representar cada camada.
 As camadas mais internas não interagem diretamente com as camadas mais externas.
 São utilizadas abstrações para permitir que as camadas se comuniquem, respeitando assim o Princípio de Inversão de Dependências.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{images/clean_arch.png}
+	\caption{Fluxo de funcionamento da Arquitetura Limpa}
+	\label{fig:clean_arch}
+\end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.6\textwidth]{images/clean_arch_circles.png}
+	\includegraphics[width=0.65\textwidth]{images/clean_arch_circles.png}
 	\caption{Camadas da Arquitetura Limpa e suas dependências}
 	\label{fig:clean_arch_circles}
 \end{figure}

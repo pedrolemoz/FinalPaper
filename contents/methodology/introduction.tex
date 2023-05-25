@@ -3,14 +3,25 @@ A aplicação permite o cadastro e autenticação por meio de credenciais ou de 
 Após autenticar-se, o usuário é capaz de criar, visualizar, editar e apagar notas que existam em sua conta.
 Os dados são armazenados no serviço remoto Firebase \cite{firebase}, além de serem persistidos localmente no dispositivo.
 O aplicativo foi construído utilizando a linguagem Dart, fazendo uso do framework Flutter~\cite{flutter}.
+
 Na Figura~\ref{fig:screenshots} é possível visualizar cinco capturas de tela do aplicativo.
-A Figura~\ref{fig:project_clean_arch} contém o diagrama da aplicação desenvolvida com a arquitetura limpa, e a Figura~\ref{fig:project_mvc} contém o diagrama da aplicação desenvolvida com MVC.
+A Figura~\ref{fig:project_clean_arch} contém alguns dos principais os objetos, interfaces e casos de uso do projeto criado com a arquitetura limpa.
+Já na Figura~\ref{fig:project_mvc}, podemos visualizar alguns objetos do projeto criado com o MVC.
+Cada grupo de retângulos representa uma camada, cujo o nome é exibido logo acima. 
+Os retângulos com uma linha contínua representam classes concretas, ao passo que os que possuem uma linha tracejada representam interfaces.
+O segmento de reta que há entre um retângulo com linha tracejada e um com linha contínua representa que a classe concreta implementa a interface.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1\textwidth]{images/screenshots.png}
+	\caption{Capturas de tela do aplicativo}
+	\label{fig:screenshots}
+\end{figure}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{images/screenshots.png}
-	\caption{Capturas de tela do aplicativo}
-	\label{fig:screenshots}
+	\includegraphics[width=1\textwidth]{images/project_mvc.png}
+	\caption{Componentes do projeto criado com MVC}
+	\label{fig:project_mvc}
 \end{figure}
 
 \begin{figure}[ht]
@@ -20,9 +31,4 @@ A Figura~\ref{fig:project_clean_arch} contém o diagrama da aplicação desenvol
 	\label{fig:project_clean_arch}
 \end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=1\textwidth]{images/project_mvc.png}
-	\caption{Componentes do projeto criado com MVC}
-	\label{fig:project_mvc}
-\end{figure}
+\clearpage
