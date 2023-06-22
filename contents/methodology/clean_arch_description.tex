@@ -1,5 +1,5 @@
-\cite{clean-arch-book} mostra a Arquitetura Limpa, uma abordagem que tem por objetivo delimitar responsabilidades para cada um dos componentes em um software.
-Esta abordagem produz softwares independentes de \emph{frameworks}, interfaces de usuário, bancos de dados e de qualquer agente externo, de modo que as regras de negócio sejam plenamente testáveis.
+Em~\cite{clean-arch-book} é apresentada a Arquitetura Limpa, uma abordagem que tem por objetivo delimitar responsabilidades para cada um dos componentes em um software.
+Esta abordagem produz softwares desacoplados de \emph{frameworks}, interfaces de usuário, bancos de dados e de qualquer agente externo, de modo que as regras de negócio sejam plenamente testáveis.
 
 A Arquitetura Limpa divide as responsabilidades em quatro níveis: entidades, casos de uso, adaptadores de interfaces e agentes externos.
 As entidades encapsulam regras de negócio inerentes ao domínio da aplicação.
@@ -20,6 +20,8 @@ Já os segmentos de reta contínuos representam uma dependência direta entre os
 Na Figura~\ref{fig:clean_arch_circles} são utilizados círculos concêntricos para representar cada camada.
 As camadas mais internas não interagem diretamente com as camadas mais externas.
 São utilizadas abstrações para permitir que as camadas se comuniquem, respeitando assim o Princípio de Inversão de Dependências.
+Este princípio diz que componentes devem depender de abstrações, e não de implementações concretas.
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\textwidth]{images/clean_arch.png}

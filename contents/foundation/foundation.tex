@@ -1,12 +1,12 @@
 Padrões arquiteturais são descrições de alto nível dos componentes de um software e seus relacionamentos.
-Em \cite{mvc-paper}, é apresentado o padrão MVC (\emph{Model-View-Controller}), que visava padronizar a forma que os sistemas com interface gráficas eram construídos, dividindo as responsabilidades da aplicação em alguns componentes.
+Em~\cite{mvc-paper}, é apresentado o padrão MVC (\emph{Model-View-Controller}), que visa padronizar a forma que os sistemas com interface gráficas são construídos, dividindo as responsabilidades da aplicação em alguns componentes.
 
-Em \cite{clean-arch-book} foi apresentada a \emph{Clean Architecture} (Arquitetura Limpa, em português), uma abordagem que unifica as ideias presentes no \emph{Domain-Driven Design} \cite{ddd-book} e na \emph{Hexagonal Architecture} \cite{hexagonal-arch} com os princípios SOLID.
+Em~\cite{clean-arch-book} foi apresentada a \emph{Clean Architecture} (Arquitetura Limpa, em português), uma abordagem que unifica as ideias presentes no \emph{Domain-Driven Design}~\cite{ddd-book} e na \emph{Hexagonal Architecture}~\cite{hexagonal-arch} com os princípios SOLID\@.
 A arquitetura visa permitir que o software desenvolvido seja plenamente testável, por desacoplar dependências externas.
-Além disso, a arquitetura almeja possibilitar que o cliente da aplicação seja independente da lógica de negócio.
+Além disso, a arquitetura almeja possibilitar que o cliente da aplicação seja desacoplado da lógica de negócio.
 
 SOLID é um acrônimo em inglês para 5 princípios de design de software, sendo estes o Princípio da Responsabilidade Única, Princípio do Aberto-Fechado, Princípio da Substituição de Liskov, Princípio da Segregação de Interfaces e Princípio de Inversão de Dependências.
-Seu objetivo é guiar a criação de componentes que tolerem mudanças, sejam de fácil entendimento e sirvam de base para a criação outros projetos de software~\cite{clean-arch-book}.
+Seu objetivo é guiar a criação de componentes coesos, com um baixo acoplamento, que tolerem mudanças, sejam de fácil entendimento e sirvam de base para a criação outros projetos de software~\cite{clean-arch-book}.
 
 Coesão diz respeito ao relacionamento que os membros de um determinado componente possuem entre si.
 Componentes coesos possuem uma relação forte, onde os membros estão intimamente ligados em prol de um objetivo comum.
