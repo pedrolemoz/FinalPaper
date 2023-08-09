@@ -1,6 +1,7 @@
 No MVC, as operações relacionadas ao banco de dados remoto se encontram nos \emph{Models}, os quais são \emph{NoteModel} e \emph{UserModel}.
 Toda a lógica para obter e adicionar dados está concentrada nestes dois componentes.
 Eles fazem uso direto das bibliotecas externas que são necessárias para acessar o Firebase.
+
 Com isso, faz-se necessário alterar esses dois componentes quase que em sua totalidade para se adequarem ao cenário proposto.
 Com a alteração destes dois componentes, também seria necessário efetuar modificações nos \emph{Controllers} da aplicação que interagem diretamente com os \emph{Models}.
 
@@ -8,5 +9,6 @@ Na arquitetura limpa, as operações relacionadas ao banco de dados remoto se en
 Existem duas classes abstratas que definem operações no banco de dados remotos: \emph{INotesRemoteDataBase} e \emph{IUsersRemoteDataBase}.
 Essas duas interfaces possuem suas respectivas implementações utilizando o Firebase.
 Os repositórios que fazem uso do banco de dados remoto recebem uma instância das implementações por meio de injeção de dependências, pois estão dependendo de uma abstração, e não de uma implementação concreta.
+
 Para se adequar ao cenário proposto, seria necessário criar implementações de \emph{INotesRemoteDataBase} e \emph{IUsersRemoteDataBase} no novo banco de dados remoto, e realizar a injeção deles na aplicação.
 Não é necessário alterar nenhum outro componente além dos que já foram criados anteriormente.

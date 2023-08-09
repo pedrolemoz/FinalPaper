@@ -17,17 +17,18 @@ A camada de agentes externos é composta por \emph{frameworks}, bibliotecas de t
 A Figura~\ref{fig:clean_arch} ilustra as interações entre cada uma das camadas da arquitetura limpa.
 Os segmentos de reta tracejados representam uma dependência indireta entre os componentes, isto é, por meio de abstrações.
 Já os segmentos de reta contínuos representam uma dependência direta entre os componentes.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{images/clean_arch.png}
+	\caption{Fluxo de funcionamento da Arquitetura Limpa}
+	\label{fig:clean_arch}
+\end{figure}
+
 Na Figura~\ref{fig:clean_arch_circles} são utilizados círculos concêntricos para representar cada camada.
 As camadas mais internas não interagem diretamente com as camadas mais externas.
 São utilizadas abstrações para permitir que as camadas se comuniquem, respeitando assim o Princípio de Inversão de Dependências.
 Este princípio diz que componentes devem depender de abstrações, e não de implementações concretas.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=1\textwidth]{images/clean_arch.png}
-	\caption{Fluxo de funcionamento da Arquitetura Limpa}
-	\label{fig:clean_arch}
-\end{figure}
 
 \begin{figure}[ht]
 	\centering

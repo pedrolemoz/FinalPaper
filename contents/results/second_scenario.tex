@@ -6,5 +6,6 @@ A \emph{View} que realiza a listagem de notas também sofrerá alterações.
 
 Já na arquitetura limpa, é necessário criar um novo caso de uso que realize a validação dos dados de entrada do usuário, solicite dados ao repositório das notas e que ao recebê-los, realize a sua ordenação de forma cronológica.
 A abstração e implementação do repositório de notas deverão ser modificadas, adicionando-se um método para realização da busca.
+
 O mesmo deve acontecer com as abstrações e implementações dos bancos de dados, que por sua vez, farão uso direto das bibliotecas externas que são necessárias.
 Assim como no MVC, é necessário criar novos métodos no \emph{Controller} responsável pela listagem de notas, de modo a consumir o recém criado caso de uso, bem como realizar alterações na \emph{View} correspondente.

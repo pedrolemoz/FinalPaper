@@ -3,11 +3,14 @@ São apresentados três componentes principais: \emph{Model} (modelo), \emph{Vie
 
 A \emph{Model} é representada como uma estrutura de dados unificada com os métodos necessários para manipulá-los.
 Serviços externos, como APIs e bancos de dados podem ser consumidos por ela.
+
 Dada uma \emph{Model} qualquer, há uma ou mais \emph{Views} associadas a ela, capazes de exibir alguma representação gráfica ou textual da \emph{Model} em questão.
 A \emph{View} pode consultar a \emph{Model} para decidir sobre a exibição dos dados.
 O \emph{Controller} é a ponte entre o usuário e uma ou mais \emph{Views}.
 Ele é responsável por validar e adequar a entrada do usuário à \emph{Model}, e repassar o resultado do processamento para as \emph{Views} correspondentes.
+
 A Figura~\ref{fig:mvc} apresenta um diagrama que ilustra o funcionamento do padrão MVC.
+Os segmentos de reta contínuos representam uma dependência direta entre os componentes, ao passo que os segmentos de reta tracejados representam uma dependência indireta.
 
 \begin{figure}[ht]
 	\centering
